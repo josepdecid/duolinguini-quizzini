@@ -10,121 +10,138 @@
   </head>
 
   <body>
-    <div class="app-container">
-      <div class="background-image"></div>
+    <div class="background-image"></div>
 
-      <div class="app-content">
-        <!-- Quiz screen -->
-        <div id="quiz-screen">
-          <div class="header">
-            <div class="progress-container">
-              <div class="progress-bar" id="progress-bar"></div>
+    <div class="content">
+      <!-- #region Start Screen -->
+      <section id="start-screen" class="screen">
+        <div>
+          <h1 class="title">Italian Brainrot Quiz</h1>
+          <img
+            class="logo"
+            src="/duolinguini-quizzini.webp"
+            alt="Duolinguini Quizzini"
+          />
+          <p class="quote">
+            “Amo le bombe e odio perdere la serie di giorni...”
+          </p>
+          <p class="author">Duolinguini Quizzini (2025)</p>
+        </div>
+
+        <div>
+          <div>
+            <p class="settings-label">Game mode:</p>
+            <div id="settings-game-mode-buttons" class="settings-container">
+              <button class="selectable-button settings-button selected">
+                All in!
+              </button>
+              <button class="selectable-button settings-button">
+                Text only
+              </button>
+              <button class="selectable-button settings-button">
+                Audio only
+              </button>
             </div>
-            <div class="lives">
-              <div class="heart-icon">❤️</div>
+          </div>
+
+          <button id="start-button" class="cta-button">Start Quiz</button>
+        </div>
+      </section>
+      <!-- #endregion -->
+
+      <!-- #region Quiz Screen -->
+      <section id="quiz-screen" class="screen hidden">
+        <div>
+          <div class="header">
+            <div class="progress-bar-container">
+              <div id="progress-bar"></div>
+            </div>
+
+            <div class="lives-count-container">
+              <span>❤️</span>
               <span id="lives-count">3</span>
             </div>
           </div>
 
-          <div class="main-content">
-            <h1 class="title">Choose the correct image</h1>
+          <div>
+            <h2 class="title">Choose the correct image</h2>
 
-            <div class="phrase-container">
-              <button class="audio-button" id="audio-button">
-                <span class="audio-icon"
-                  ><svg
+            <div class="subtitle">
+              <button id="audio-button">
+                <span class="audio-icon">
+                  <svg
                     width="16px"
                     height="16px"
                     viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                    fill="inherit"
                   >
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
                       d="M10.4 1.8C11.5532 0.262376 14 1.07799 14 3.00001V21.1214C14 23.0539 11.5313 23.8627 10.3878 22.3049L6.49356 17H4C2.34315 17 1 15.6569 1 14V10C1 8.34315 2.34315 7 4 7H6.5L10.4 1.8ZM12 3L8.1 8.2C7.72229 8.70361 7.12951 9 6.5 9H4C3.44772 9 3 9.44772 3 10V14C3 14.5523 3.44772 15 4 15H6.49356C7.13031 15 7.72901 15.3032 8.10581 15.8165L12 21.1214V3Z"
-                      fill="#0F0F0F"
                     />
                     <path
                       d="M16.2137 4.17445C16.1094 3.56451 16.5773 3 17.1961 3C17.6635 3 18.0648 3.328 18.1464 3.78824C18.4242 5.35347 19 8.96465 19 12C19 15.0353 18.4242 18.6465 18.1464 20.2118C18.0648 20.672 17.6635 21 17.1961 21C16.5773 21 16.1094 20.4355 16.2137 19.8256C16.5074 18.1073 17 14.8074 17 12C17 9.19264 16.5074 5.8927 16.2137 4.17445Z"
-                      fill="#0F0F0F"
                     />
                     <path
                       d="M21.41 5C20.7346 5 20.2402 5.69397 20.3966 6.35098C20.6758 7.52413 21 9.4379 21 12C21 14.5621 20.6758 16.4759 20.3966 17.649C20.2402 18.306 20.7346 19 21.41 19C21.7716 19 22.0974 18.7944 22.2101 18.4509C22.5034 17.5569 23 15.5233 23 12C23 8.47672 22.5034 6.44306 22.2101 5.54913C22.0974 5.20556 21.7716 5 21.41 5Z"
-                      fill="#0F0F0F"
-                    /></svg
-                ></span>
+                    />
+                  </svg>
+                </span>
               </button>
-              <span class="phrase" id="phrase"></span>
+              <span id="phrase"></span>
             </div>
 
             <div class="options-grid">
-              <button class="option-button" data-index="0">
-                <div class="option-image-container">
-                  <img src="#" alt="Option 1" class="option-image" />
-                </div>
+              <button class="selectable-button option-button" data-index="0">
+                <img src="#" alt="Option 1" />
               </button>
-              <button class="option-button" data-index="1">
-                <div class="option-image-container">
-                  <img src="#" alt="Option 2" class="option-image" />
-                </div>
+              <button class="selectable-button option-button" data-index="1">
+                <img src="#" alt="Option 2" />
               </button>
-              <button class="option-button" data-index="2">
-                <div class="option-image-container">
-                  <img src="#" alt="Option 3" class="option-image" />
-                </div>
+              <button class="selectable-button option-button" data-index="2">
+                <img src="#" alt="Option 3" />
               </button>
-              <button class="option-button" data-index="3">
-                <div class="option-image-container">
-                  <img src="#" alt="Option 4" class="option-image" />
-                </div>
+              <button class="selectable-button option-button" data-index="3">
+                <img src="#" alt="Option 4" />
               </button>
             </div>
-
-            <button class="check-button" id="check-button" disabled>
-              Check
-            </button>
           </div>
         </div>
 
-        <!-- Results screen (hidden by default) -->
-        <div id="results-screen" class="hidden">
-          <div class="header">
-            <div class="lives">
-              <div class="heart-icon">❤️</div>
-              <span id="results-lives-count">3</span>
-            </div>
-          </div>
+        <button id="check-button" class="cta-button" disabled>Check</button>
+      </section>
+      <!-- #endregion -->
 
-          <div class="results-content">
-            <div class="results-card">
-              <h2 class="results-title">Quiz Completed!</h2>
-              <div class="score" id="final-score">0/10</div>
-              <p class="results-message" id="results-message">Mamma mia!</p>
-
-              <div class="results-buttons">
-                <button class="try-again-button" id="try-again-button">
-                  Try Again
-                </button>
-                <button id="share-button" class="share-button">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 1200 1227"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
-                      fill="black"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
+      <!-- #region Results screen -->
+      <section id="results-screen" class="screen hidden">
+        <div>
+          <h2 class="title">Quiz Completed!</h2>
+          <p id="results-message">Mamma mia!</p>
+          <p id="final-score">0/10</p>
         </div>
-      </div>
+
+        <div>
+          <button id="share-button">
+            Share on
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 1200 1227"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+
+          <button id="play-again-button" class="cta-button">Play Again</button>
+        </div>
+      </section>
+      <!-- #endregion -->
     </div>
 
     <audio id="audio-player" preload="none"></audio>
