@@ -1,4 +1,11 @@
-import { brainrot } from "./brainrot";
+const brainrot = Object.keys(import.meta.glob('../public/brainrot/*.webp'))
+  .map((path) => {
+    const id = path.split('/').pop().split('.').shift();
+    return {
+      id,
+      phrase: id.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
+    }
+  });
 
 const state = {
 	questions: [],

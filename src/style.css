@@ -207,7 +207,16 @@ body {
 		font-weight: bold;
 	}
 
-	& #share-button {
+  & .social-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    column-gap: 8px;
+  }
+
+	& .social-button {
 		display: flex;
 		align-items: center;
 		column-gap: 8px;
@@ -224,6 +233,11 @@ body {
 		cursor: pointer;
 		margin: 0 auto;
 		margin-bottom: 8px;
+
+    &:hover {
+      background-color: var(--gray);
+    }
+
 	}
 }
 
