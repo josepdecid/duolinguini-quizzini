@@ -1,15 +1,18 @@
 {
-	"name": "duolinguini-quizzini",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"vite": "^6.2.2"
-	}
+  "name": "duolinguini-quizzini",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@tailwindcss/vite": "^4.0.15",
+    "alpinejs": "^3.14.9",
+    "tailwindcss": "^4.0.15",
+    "vite": "^6.2.2"
+  }
 }
