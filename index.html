@@ -15,10 +15,57 @@
     </script>
 
     <title>Italian Brainrot Quiz</title>
+    <meta
+      name="description"
+      content="A fun quiz game to test your knowledge of Italian memes and internet culture"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://duolinguini-quizzini.com/" />
+    <meta property="og:title" content="Italian Brainrot Quiz" />
+    <meta
+      property="og:description"
+      content="A fun quiz game to test your knowledge of Italian memes and internet culture"
+    />
+    <meta
+      property="og:image"
+      content="https://duolinguini-quizzini.com/duolinguini-quizzini.webp"
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://duolinguini-quizzini.com/" />
+    <meta name="twitter:title" content="Italian Brainrot Quiz" />
+    <meta
+      name="twitter:description"
+      content="A fun quiz game to test your knowledge of Italian memes and internet culture"
+    />
+    <meta
+      name="twitter:image"
+      content="https://duolinguini-quizzini.com/duolinguini-quizzini.webp"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="src/style.css" />
     <link rel="icon" type="ico" href="/favicon.ico" />
+    <link rel="canonical" href="https://duolinguini-quizzini.com/" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Italian Brainrot Quiz",
+        "description": "A fun quiz game to test your knowledge of Italian memes and internet culture",
+        "url": "https://duolinguini-quizzini.com/",
+        "image": "https://duolinguini-quizzini.com/duolinguini-quizzini.webp",
+        "inLanguage": "en",
+        "genre": "Quiz",
+        "gamePlatform": "Web Browser",
+        "applicationCategory": "Game"
+      }
+    </script>
   </head>
 
   <body x-data="app">
@@ -181,7 +228,12 @@
               </template>
             </div>
 
-            <button x-on:click="initQuiz" class="cta-button">Play Again</button>
+            <button x-on:click="initQuiz" class="cta-button mb-2">
+              Play Again
+            </button>
+            <button x-on:click="screen = 'start'" class="cta-button">
+              Go Back Home
+            </button>
           </div>
         </main>
       </template>
