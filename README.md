@@ -15,7 +15,7 @@ If you are the owner of any content and would like it removed, please open an is
 Want to add more animals to the quiz? Just create a Piull adding your own meme assets. You just need to add the image and the audio file into the `/public/brainrot` folder following these constraints:
 
 - Both image and audio file must have the same file name.
-- The image must be a `.webp` file of 360x360 pixels.
+- The image must be a `.webp` file of 150x150 pixels.
 - The audio file must be a `.mp3` file.
 - Name the files with kebab-case without any special characters, spaces or capital letters.
 
