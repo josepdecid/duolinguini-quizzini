@@ -157,7 +157,7 @@
                   </button>
                 </template>
 
-                <template x-if="currentQuestion !== null">
+                <template x-if="currentQuestion !== null && textEnabled">
                   <div>
                     <template
                       x-for="word in currentQuestion.correctOptionWords"
@@ -171,7 +171,7 @@
                 </template>
               </div>
 
-              <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="grid grid-cols-2 gap-4 mb-8 max-w-md mx-auto">
                 <template x-if="currentQuestion !== null">
                   <template x-for="optionId in currentQuestion.optionIds">
                     <button
